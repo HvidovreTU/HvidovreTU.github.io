@@ -6,7 +6,7 @@
     <title>Hvidovre Tværpolitiske Ungdom (HTU)</title>
     <meta name="description" content="Hvidovre Tværpolitiske Ungdom (HTU) er et partipolitisk uafhængigt fællesskab for unge i Hvidovre med interesse for lokalsamfundet og samfundsdebat.">
     
-    <style>
+<style>
         :root {
             /* Farvepalette udtrækket fra logoets gradient */
             --gradient-start: #f89a91;
@@ -25,14 +25,14 @@
         }
 
         body {
-            /* Century Gothic matcher skrifttyperne i foreningsdokumenterne */
+            /* Century Gothic matcher skrifttyperne i jeres dokumenter */
             font-family: "Century Gothic", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
             color: var(--text-dark);
             background-color: var(--light-bg);
             line-height: 1.6;
         }
 
-        /* Hero / Header sektion med logoets gradient */
+        /* Hero / Header med logoets gradient */
         header {
             background: linear-gradient(135deg, var(--gradient-start) 0%, #c494c2 50%, var(--gradient-end) 100%);
             color: #ffffff;
@@ -162,6 +162,71 @@
         .cta-btn:hover {
             transform: translateY(-2px);
             box-shadow: 0 6px 20px rgba(120, 99, 214, 0.45);
+        }
+
+        /* Social Media knapper */
+        .social-links-section {
+            text-align: center;
+            margin: 2rem 0 1rem 0;
+        }
+
+        .social-links-section h3 {
+            font-size: 1.1rem;
+            color: var(--text-muted);
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .social-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.6rem 1.2rem;
+            background: #ffffff;
+            color: var(--text-dark);
+            text-decoration: none;
+            border-radius: 50px;
+            font-size: 0.95rem;
+            font-weight: bold;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+            border: 1px solid #eaeaea;
+            transition: all 0.25s ease;
+        }
+
+        .social-btn svg {
+            transition: transform 0.2s ease;
+        }
+
+        .social-btn:hover {
+            transform: translateY(-2px);
+            color: #ffffff;
+            border-color: transparent;
+        }
+
+        .social-btn:hover svg {
+            transform: scale(1.1);
+        }
+
+        .social-btn.facebook:hover {
+            background: #1877F2;
+            box-shadow: 0 6px 15px rgba(24, 119, 242, 0.3);
+        }
+
+        .social-btn.instagram:hover {
+            background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+            box-shadow: 0 6px 15px rgba(220, 39, 67, 0.3);
+        }
+
+        .social-btn.tiktok:hover {
+            background: #000000;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
         }
 
         footer {
