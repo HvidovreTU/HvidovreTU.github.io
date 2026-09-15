@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hvidovre Tværpolitiske Ungdom (HTU)</title>
+    <meta name="description" content="Hvidovre Tværpolitiske Ungdom (HTU) er et partipolitisk uafhængigt fællesskab for unge i Hvidovre med interesse for lokalsamfundet og samfundsdebat.">
+    
+    <style>
+        :root {
+            /* Farvepalette udtrækket fra logoets gradient */
+            --gradient-start: #f89a91;
+            --gradient-end: #9d8df2;
+            --primary-accent: #7863d6;
+            --text-dark: #222222;
+            --text-muted: #555555;
+            --card-bg: #ffffff;
+            --light-bg: #faf9ff;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            /* Century Gothic matcher skrifttyperne i foreningsdokumenterne */
+            font-family: "Century Gothic", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            color: var(--text-dark);
+            background-color: var(--light-bg);
+            line-height: 1.6;
+        }
+
+        /* Hero / Header sektion med logoets gradient */
+        header {
+            background: linear-gradient(135deg, var(--gradient-start) 0%, #c494c2 50%, var(--gradient-end) 100%);
+            color: #ffffff;
+            text-align: center;
+            padding: 4rem 1.5rem 5rem 1.5rem;
+            position: relative;
+        }
+
+        .header-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .logo-img {
+            max-width: 170px;
+            width: 100%;
+            height: auto;
+            border-radius: 20px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+            margin-bottom: 1.5rem;
+            background: #fff;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+            margin-bottom: 0.5rem;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        header p.tagline {
+            font-size: 1.25rem;
+            opacity: 0.95;
+            font-weight: 300;
+        }
+
+        /* Hovedindhold */
+        main {
+            max-width: 900px;
+            margin: -2.5rem auto 3rem auto;
+            padding: 0 1.5rem;
+            position: relative;
+            z-index: 2;
+        }
+
+        .card {
+            background: var(--card-bg);
+            border-radius: 16px;
+            padding: 2.5rem;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+            margin-bottom: 2rem;
+        }
+
+        h2 {
+            font-size: 1.75rem;
+            margin-bottom: 1rem;
+            color: var(--text-dark);
+            position: relative;
+            padding-bottom: 0.5rem;
+        }
+
+        h2::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 50px;
+            height: 3px;
+            background: linear-gradient(90deg, var(--gradient-start), var(--gradient-end));
+            border-radius: 2px;
+        }
+
+        p {
+            margin-bottom: 1rem;
+            color: var(--text-muted);
+            font-size: 1.05rem;
+        }
+
+        /* Punktliste for mærkesager / fokus */
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 1.5rem;
+            margin: 1.5rem 0;
+        }
+
+        .feature-item {
+            background: var(--light-bg);
+            border-radius: 12px;
+            padding: 1.25rem;
+            border-left: 4px solid var(--primary-accent);
+        }
+
+        .feature-item h3 {
+            font-size: 1.15rem;
+            margin-bottom: 0.3rem;
+            color: var(--text-dark);
+        }
+
+        .feature-item p {
+            font-size: 0.95rem;
+            margin-bottom: 0;
+        }
+
+        /* Call-To-Action (Indmeldelse) */
+        .cta-section {
+            text-align: center;
+            background: linear-gradient(135deg, rgba(248, 154, 145, 0.1) 0%, rgba(157, 141, 242, 0.1) 100%);
+            border: 1px solid rgba(157, 141, 242, 0.2);
+        }
+
+        .cta-btn {
+            display: inline-block;
+            background: linear-gradient(135deg, var(--gradient-start), var(--primary-accent));
+            color: #ffffff;
+            font-size: 1.15rem;
+            font-weight: bold;
+            text-decoration: none;
+            padding: 1rem 2.2rem;
+            border-radius: 50px;
+            margin-top: 1rem;
+            box-shadow: 0 4px 15px rgba(120, 99, 214, 0.3);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .cta-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(120, 99, 214, 0.45);
+        }
+
+        footer {
+            text-align: center;
+            padding: 2rem 1.5rem;
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+
+        footer a {
+            color: var(--primary-accent);
+            text-decoration: none;
+        }
+
+        @media (max-width: 600px) {
+            header h1 { font-size: 2rem; }
+            .card { padding: 1.5rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="header-content">
+            <!-- Sørg for at filnavnet på logoet matcher placeringen i dit repository -->
+            <img src="HTU Hvidovres Tværpolitiske Ungdom.png" alt="HTU Logo med Hvidovre Vandtårn" class="logo-img">
+            <h1>Hvidovre Tværpolitiske Ungdom</h1>
+            <p class="tagline">Et partipolitisk uafhængigt fællesskab for unge i Hvidovre</p>
+        </div>
+    </header>
+
+    <main>
+        <!-- Formål -->
+        <section class="card">
+            <h2>Om Foreningen</h2>
+            <p>
+                <strong>Hvidovre Tværpolitiske Ungdom (HTU)</strong> er en lokal ungdomsforening for unge i og omkring Hvidovre. Vi er en tværpolitisk og uafhængig platform, hvor unge mødes for at drøfte aktuelle emner, styrke lokaldemokratiet og give ungdommen en stærkere stemme i kommunen.
+            </p>
+            
+            <div class="features">
+                <div class="feature-item">
+                    <h3>Demokrati & Dialog</h3>
+                    <p>Vi skaber et åbent rum for debat uden partifarve, hvor alle holdninger kan brydes i en god tone.</p>
+                </div>
+                <div class="feature-item">
+                    <h3>Ungdomsliv i Hvidovre</h3>
+                    <p>Vi arbejder for flere og bedre rammer, kulturtilbud og fællesskaber for unge i vores lokalmiljø.</p>
+                </div>
+                <div class="feature-item">
+                    <h3>Fællesskab & Oplevelser</h3>
+                    <p>Vi afholder faglige oplæg, debataftener samt sociale arrangementer og medlemsmøder.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Indmeldelse / Handlingsknap -->
+        <section class="card cta-section">
+            <h2>Bliv en del af HTU</h2>
+            <p>
+                Vil du have indflydelse, møde andre engagerede unge og være med til vores næste arrangementer? 
+                Medlemskabet er åbent for alle unge i målgruppen.
+            </p>
+            
+            <!-- UDSKIFT LINKET NEDENFOR MED DIT GOOGLE FORMS / INDMELDELSESLINK -->
+            <a href="https://forms.gle/DIT-LINK-HER" class="cta-btn" target="_blank" rel="noopener noreferrer">
+                Gå til indmeldingsblanket &rarr;
+            </a>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; Hvidovre Tværpolitiske Ungdom (HTU)</p>
+        <p>Kontakt os via vores sociale medier eller på e-mail: <a href="mailto:kontakt@htu.dk">kontakt@htu.dk</a></p>
+    </footer>
+
+</body>
+</html>
